@@ -1,6 +1,12 @@
 <div class="board">
-  <app-card
-    *ngFor="let story of stories"
-    [story]="story"
-  ></app-card>
+  <div class="kanban-column" *ngFor="let column of columns">
+    <mat-card class="kanban-header" [ngClass]="getHeaderClass(column.status)">
+      <mat-card-title>{{column.title}}</mat-card-title>
+    </mat-card>
+
+    <div class="story-list">
+      <app-card *ngFor="let story of column.stories" [story]="story"></app-card>
+    </div>
+
+  </div>
 </div>
