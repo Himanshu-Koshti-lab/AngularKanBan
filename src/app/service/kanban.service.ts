@@ -2,11 +2,7 @@ import { Column } from "../component/column/column";
 
 export class KanbanService {
     getColumns(): Column[] {
-        return [
-            {
-                id: 'col-1',
-                title: 'BACKLOG',
-                tasks: [
+        return  [
                     {
                         "id": 1,
                         "title": "Login Page",
@@ -117,8 +113,6 @@ export class KanbanService {
                         "createdBy": "Application Init",
                         "assignedTo": "Current Developer"
                     }
-                ],
-            }
-        ];
+                ]
     }
 }
