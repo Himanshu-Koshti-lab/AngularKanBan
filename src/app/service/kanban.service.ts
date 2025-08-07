@@ -1,7 +1,7 @@
-import { Column } from "../component/column/column";
+import { Task } from "../entity/task.model";
 
 export class KanbanService {
-    getColumns(): Column[] {
+    getColumns(): Task[] {
         return  [
                     {
                         "id": 1,

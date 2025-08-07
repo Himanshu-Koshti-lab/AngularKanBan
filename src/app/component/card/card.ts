@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from '../../entity/task.model';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-card',
-  imports: [],
+  imports: [MatCardModule],
   templateUrl: './card.html',
   styleUrl: './card.css'
 })
 export class Card {
-
+@Input() story!: Task;
 }

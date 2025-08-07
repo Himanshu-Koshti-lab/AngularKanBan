@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { Column } from '../column/column';
 import { KanbanService } from '../../service/kanban.service';
+import { Task } from '../../entity/task.model';
+import { Card } from '../card/card';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-board',
-  imports: [],
+  imports: [ Card, CommonModule ],
   templateUrl: './board.html',
   styleUrl: './board.css'
 })
 export class Board {
-  columns: Column[] = [];
+  stories: Task[] = [];
 
   constructor(private kanbanService: KanbanService) {
-    this.columns = this.kanbanService.getColumns();
-    console.log(this.columns);
-    
+    this.stories = this.kanbanService.getColumns();
+    console.log(this.stories);    
   }
 }

@@ -1,1 +1,12 @@
-<p>card works!</p>
+<mat-card class="story-card">
+  <mat-card-title> US-{{story.id}} : {{ story.title.toUpperCase() }}</mat-card-title>
+  <mat-card-subtitle>Status: {{ story.status }}</mat-card-subtitle>
+  <mat-card-content>
+    <p>Description : {{ story.description }}</p>
+    <div class="meta">
+      <div><strong>Created By: </strong> {{ story.createdBy }}</div>
+      <div><strong>Assigned To: </strong> {{ story.assignedTo }}</div>
+      <div><strong>Creation Time: </strong> {{ story.creationTime }}</div>
+    </div>
+  </mat-card-content>
+</mat-card>
