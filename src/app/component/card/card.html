@@ -4,9 +4,9 @@
   <mat-card-content>
     <p>Description : {{ story.description }}</p>
     <div class="meta">
-      <div><strong>Created By: </strong> {{ story.createdBy }}</div>
-      <div><strong>Assigned To: </strong> {{ story.assignedTo }}</div>
-      <div><strong>Creation Time: </strong> {{ story.creationTime }}</div>
+      <div class="meta-info"><strong>Created By: </strong> {{ story.createdBy }}</div>
+      <div class="meta-info"><strong>Assigned To: </strong> {{ story.assignedTo }}</div>
+      <div class="meta-info"><strong>Creation Time: </strong> {{ getReadableTime(story.creationTime) }}</div>
     </div>
   </mat-card-content>
 </mat-card>

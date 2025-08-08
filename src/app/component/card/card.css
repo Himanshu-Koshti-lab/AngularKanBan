@@ -10,3 +10,9 @@
   color: #666;
   margin-top: 10px;
 }
+
+
+.meta-info{
+  display: flex;
+  justify-content: space-between;
+}

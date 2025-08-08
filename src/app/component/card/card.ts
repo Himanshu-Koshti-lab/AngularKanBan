@@ -9,5 +9,12 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './card.css'
 })
 export class Card {
+
+
+getReadableTime(arg0: string) {
+  return new Date(arg0).toLocaleDateString()
+}
+
+
 @Input() story!: Task;
 }

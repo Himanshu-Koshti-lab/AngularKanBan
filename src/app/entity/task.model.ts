@@ -2,7 +2,7 @@ export interface Task {
   id: number;
   title: string;
   description: string;
-  status: 'BACKLOG' | 'BLOCKED' | 'IN_PROGRESS' | 'COMPLETED';
+  status: string;
   creationTime: string;
   startTime: string | null;
   lastUpdate: string | null;
